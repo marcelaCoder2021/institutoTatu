@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--agrego fuentes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Instituto Tatu</title>
+</head>
+<body>
+    <header class="mainHeader"><!--AbreHeader--> 
+        <a href="index.html">
+            <img class="mainLogo" src="assets/logo.png">
+        </a>
+        <nav id="nav" class="mainNav">
+            <ul class="navLinks">
+                <li>
+                    <a class="linkItem" href="index.html"> Home</a>
+                </li>
+                <li>
+                    <a class="linkItem" href="#formularioInscripcion">Empecemos</a>
+                </li>
+                <li> 
+                    <a class="linkItem" href="#especialistas">Nuestros especialistas</a>
+                </li>
+                <li>
+                <a class="linkItem" href="#empecemos">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+            <button id="buttonMenu" class="buttonMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        <button id="carritoMenu" type="button" class="btn" data-toggle="modal" data-target ="#exampleModal">
+            <img src="assets/carrito.png" alt="carrito">
+        </button>
+    </header>
+    <section>
+        <div class="section1"> 
+            <div id="bienvenidos">
+                <h1>Bienvenidos al Instituto Tatu</h1>
+                <p>Llegamos a las familias para ayudarlas a que tengan <b>mejores posibilidades</b>, 
+                    construyendo su futuro <b>mediante la educación.</b>
+                </p>
+                <button class="btnInscripcion"> <a href="#formularioInscripcion">Inscribite ahora</a></button>
+            </div>
+            <div id="imagenInicio">
+                <img src="assets/introd.svg" alt="imagenInicio">
+            </div>
+        </div>
+    </section>
+    <section class="section2" >
+        <a name="empecemos">
+            <h2>¿Cómo me inscribo?</h2>
+        </a>
+        <div class="inscripcion">
+            <div class="postIt">
+                <img src="assets/postIt2.svg" alt="Registrate" >
+            </div>
+            <div class="postIt">
+                <img src="assets/postIt1.svg" alt="Elegí según Materia">
+            </div>
+            <div class="postIt">
+                <img src="assets/postIt3.svg" alt="Elegí profe">
+            </div>
+            <div class="postIt">
+                <img src="assets/postIt4.svg" alt="Elegi horario">
+            </div>
+        </div>
+        <div class="inscribite">
+            <button class="btnInscripcion"> <a href="#formularioInscripcion">Inscribite ahora</a></button>
+        </div>
+    </section>
+    <section class="section3">
+        <div id="aprendamos">
+            <div id="aprendiendo">
+                <h2>Aprendamos juntos</h2>
+                <p>Como familia se fundó y de familias se nutre diariamente, dando todo de nosotros mismos para poder
+                    llevar al alumnado a desempeñarse de la mejor manera, sin perder de vista el <b>apoyo</b> y la 
+                    <b>contención</b> que se les brinda.<br>
+                    Es nuestra misión otorgar siempre las mejores <b>herramientas</b> para que nuestros alumnos puedan <b>aprender</b>
+                    y estar en un ambiente cómodo para evacuar dudas.
+                </p>
+                <div id="button">
+                    <button class="btnInscripcion"> <a href="#formularioInscripcion">Inscribite ahora</a></button>
+                </div>
+            </div>
+            <img src="assets/aprendamos.svg" alt="aprendamos">
+        </div>
+    </section>
+    <section class ="section4">
+        <h2>Nuestras clases </h2>
+        <div class="clases">
+            <div class="niveles">
+                <img src="assets/nene.svg">
+                <h4>Primaria</h4>
+            </div>
+            <div class="niveles">
+                <img src="assets/ingreso.svg">
+                <h4>Ingreso a Ort</h4>
+            </div>
+        </div>
+        <div class="inscribite">
+            <button class="btnInscripcion"> <a href="#formularioInscripcion">Inscribite ahora</a></button>
+        </div>
+    </section>
+    <section class="section5">
+        <div id="equipo1">
+            <div id="profes">
+                <h2>¡Hay equipo!</h2>
+                <p>Nuestro instituto acoge y educa a cientos de alumnos por año, posicionándose como uno
+                     de los <b>líderes</b> en el mercado de institutos de apoyo escolar. Nuestra masividad no quita
+                      nuestra <b>excelencia</b> en materia de apoyo primario, e ingreso a Ort.
+                </p>
+                <div id="button">
+                    <button class="btnInscripcion"> <a href="#formularioInscripcion">Inscribite ahora</a></button>
+                </div>
+            </div>
+            <img id="equipoImagen"src="assets/equipo.svg" alt="equipo de profesores">
+        </div>
+        <div id="especialistas">
+            <h2>Nuestros especialistas</h2>
+            <div id="profesEspecialistas">
+                <div class="cardProfes">
+                    <h4>Gastón</h4>
+                    <img src="assets/Gaston1.png" alt="gaston">
+                     <h4>Matemática</h4>
+                    <p>
+                        Dinámico y entretenido, logra que la matemática se convierta en un juego en
+                        el que todos los chicos quieren participar
+                    </p>
+                </div>
+                <div class="cardProfes">
+                    <h4>Nicole</h4>
+                    <img src="assets/Nicole1.png" alt="nicole">
+                    <h4>Lengua</h4>                      
+                    <p>
+                        Gracias a ella, los verbos dejaron de ser un problema y los errores ortográficos
+                        quedaron en el pasado.
+                    </p> 
+                </div>  
+                <div class="cardProfes">
+                    <h4>Mati</h4>
+                    <img src="assets/Mati1.png" alt="mati">
+                    <h4>Historia</h4>
+                    <p>
+                        Adorado por todos los chicos, la historia enseñada por él es como un cuento
+                        lleno de aventuras.
+                    </p>
+                </div>
+                <div class="cardProfes">
+                    <h4>Stephi</h4>
+                    <img src="assets/Stephi1.png" alt="stephi">
+                    <h4>Geografia</h4>
+                    <p>
+                        Un viaje a través de los países, su clima, su división política, su topografía, y mucho más.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class= "section6">
+        <div class="formularioInscripcion">
+            <form id="formulario">
+                <div class="datosMaterias"> 
+                    <h2 id="formularioInscripcion">En qué materia necesitás apoyo?</h2>
+                    <select id="materia1" placeholder="Elegí la materia"> <!--drop down eleccion materias-->
+                        <option value="" id="elegi">Elegí la materia</option>
+                        <option value="Matemática" id="matematica">Matemática</option>
+                        <option value="Lengua" id="lengua">Lengua</option>
+                        <option value="Historia" id="historia">Historia</option>
+                        <option value="Geografía" id="geografia">Geografía</option>
+                        <option value="Ingreso" id="ingreso">Ingreso secundario</option>
+                    </select>
+                </div> 
+                <div id="segunMateria">  <!-- de acuerdo a la materia elegida -->
+                    <div class="datosProfesores"  class="profesoresHide" id="profesorMatematica">
+                        <select class="profesor1" id="profesorMatematica1" placeholder="Elegí tu profe">  <!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
+                            <option value="Guido">Guido</option>
+                            <option value="Nicole">Nicole</option>
+                        </select>
+                    </div>
+                    <div class="datosProfesores" class="profesoresHide" id="profesorLengua">
+                        <select class="profesor1" id="profesorLengua1" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option> 
+                            <option value="Lucas">Lucas</option>
+                            <option value="Stephi">Stefi</option>
+                        </select>
+                    </div>
+                    <div class="datosProfesores" class="profesoresHide" id="profesorHistoria">
+                        <select class="profesor1" id="profesorHistoria1" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
+                            <option value="Gastón" >Gastón</option>
+                    </select>
+                    </div>
+                    <div class="datosProfesores" class="profesoresHide" id="profesorGeografia">
+                        <select class="profesor1" id="profesorGeografia1" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>  
+                            <option value="Luciana">Luciana</option>
+                    </select>
+                    </div>
+                    <div class="datosProfesores"class="profesoresHide" id="profesorIngreso">
+                        <select class="profesor1" id="profesorIngreso1" placeholder="Elegí tu profe"><!--drop down eleccion profesor-->
+                            <option>Elegí tu profe</option>   
+                            <option value="Tatu">Tatu</option>
+                            <option value="Melu">Melu</option>
+                            <option value="Javi">Javi</option>
+                            <option value="Shirly">Shirly</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="horario1">
+                            <option>Elegí el día y la hora</option><!--drop down día-->
+                            <option>Lunes 16:00 a 16:45</option>
+                            <option>Lunes 17:00 a 17:45</option>
+                            <option>Lunes 18:00 a 18:45</option>
+                            <option>Lunes 19:00 a 19:45</option>                      
+                            <option>Miércoles 10:00 a 10:45</option>
+                            <option>Miércoles 11:00 a 11:45</option>
+                            <option>Miércoles 12:00 a 12:45</option>
+                            <option>Miércoles 13:00 a 13:45</option>
+                            <option>Miércoles 16:00 a 16:45</option>
+                            <option>Miércoles 17:00 a 17:45</option>
+                            <option>Miércoles 18:00 a 18:45</option>
+                            <option>Miércoles 19:00 a 19:45</option>
+                            <option>Viernes 10:00 a 10:45</option>
+                            <option>Viernes 11:00 a 11:45</option>
+                            <option>Viernes 12:00 a 12:45</option>
+                            <option>Viernes 13:00 a 13:45</option>
+                        </select>
+                    </div>
+                </div>      
+            </form>  
+        </div>
+        <button id="btnAgendar">Agendate la clase</button>
+        <button id="btnModalInicio" class="btnInscripcion" >Login </button><!--modal inicio sesión-->
+            <a href=".openModal"></a>
+                <div id="openModal" class="modalDialog">   
+                    <div id="myModal" class="modalContainer">
+                        <div class="modal-content">
+                            <h2>Iniciar sesión</h2> 
+                            <div class="datos">
+                                <h4>Ingresá tu nombre</h4>
+                                <input type="text" id="nombre" placeholder="Ingresá tu nombre">
+                                <small></small><!--para mandar mensaje de error-->
+                            </div>
+                            <div class="datos">
+                                <h4>Ingresá tu email</h4>
+                                <input type="email" id="email" placeholder="Ingresá tu email">
+                                <small></small><!--para mandar mensaje de error-->
+                            </div>
+                            <span class="confirmar" id="submit">Confirmar</span> 
+                        </div>
+                    </div>
+                </div>
+         <!--CARRITO MODAL-->
+         <div class="carrito modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampleModal">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Clases agendadas</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Materia</th>
+                                    <th scope="col">Profe</th>
+                                    <th scope="col">Horario</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody"></tbody>
+                        </table>
+                        <br><br>
+                        <div class="row mx-4">
+                            <div class="modal-footer col d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="boton_carrito_final" data-dismiss="modal">Seguir comprando</button>
+                                <button type="button" class="btn btn-secondary" id="confirmarClase">Finalizar compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </section>
+<!--abreFooter-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!--contacto-->
+                <div class="contacto col-lg-4 col-sm-12">
+                    <h4> Contacto</h4>
+                    <ol>
+                        <li>
+                            <img src="assets/telefono.png" alt="telefono">
+                            <p> 011 7373 7373</p>
+                        </li>
+                        <li>
+                            <img src="assets/mail.png" alt="mail">
+                            <p> institutoTatu@gmail.com</p>
+                        </li>
+                        <li>
+                            <img src="assets/ubicacion.png" alt="ubicacion">
+                            <p> Villa Crespo, CABA</p>
+                        </li>
+                    </ol>
+                </div>
+                <!--redesSociales-->
+                <div class="sociales col-lg-6 col-sm-12">
+                    <div>
+                        <h4>Seguinos en nuestras redes</h4>
+                    </div>
+                    <div>
+                        <a href="https://web.whatsapp.com/" target="blank">
+                            <img src="assets/whatsapp.png" alt="whatsapp" title="whatsapp">
+                        </a>
+                        <a href="https://www.facebook.com/Leidoiny-Cakes-1218950871493041/?hc_ref=ARQYTRuzalG90OdyVzor4YJlndkvL0GC6nX75gTqeBS0bhI_AiMVUQXqzjN_1IDtZUs&fref=nf&__tn__=kC-R" target="blank">
+                            <img src="assets/facebook.png" alt="facebook" title="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/leidoiny_cakes/?hl=es" target="blank">
+                            <img src="assets/instagram.png" alt="instagram" title="instagram">
+                        </a>
+                        <a href="https://www.tiktok.com/" target="blank">
+                            <img src="assets/tiktok.png" alt="instagram" title="tiktok">
+                        </a>
+                        <a href="https://ar.pinterest.com" target="blank">
+                            <img src="assets/pinterest.png" alt="instagram" title="pinterest">
+                        </a>
+                    </div>
+                </div>
+                <!--metodosPago-->
+                <div class="pago col-lg-2 col-sm-12">
+                    <h4>Medios de pago</h4>
+                    <div class="grid_pago">
+                        <div>
+                            <img src="assets/visa.png" alt="metodo de pago visa">
+                        </div>
+                        <div>
+                            <img src="assets/amex.png" alt="metodo de pago amex">
+                        </div>
+                        <div>
+                            <img src="assets/mercado_pago.png" alt="metodo de pago mercado pago">
+                        </div>
+                        <div>
+                            <img src="assets/mastercard.png" alt="metodo de pago mastercard">
+                        </div>
+                        <div>
+                            <img src="assets/diners.png" alt="metodo de pago diners">
+                        </div>
+                        <div>
+                            <img src="assets/cabal.png" alt="metodo de pago cabal">
+                        </div>
+                    </div>
+                </div>
+            </div>                    
+        </div>
+        <!--COPYRIGHT-->
+        <div class="copy">
+            <p>Copyright 2022 © MG | Made with ❤️</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script><!--jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script><!--bootstrap-->
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script><!--sweetalert-->
+    <script src ="carrito.js"></script>
+    <script src="jquery.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>

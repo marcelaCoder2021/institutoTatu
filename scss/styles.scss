@@ -1,0 +1,492 @@
+//sacoLoPredeterminado
+*{padding: 0; 
+    margin: 0;
+    border: 0ch;
+}
+//*variables/////////
+$font:'Josefin Sans', sans-serif;;  //fuente
+$fontColor: black;
+$fontTexto: "Noto sans";
+//estilosGenerales////////
+h2{
+  color: #FEB500;
+  font-family: $font;
+  font-weight: 1000;
+  letter-spacing: 3px;
+  padding-bottom: 7.5vh;
+  padding-top: 7.5vh;
+  text-align: center; 
+  }
+  h4{
+    color:#FEB500;
+    font-family: $font;
+    font-weight: 800;
+}
+.btnInscripcion{ 
+  border-radius: 25.5px;
+  background-color:#FEB500;
+  text-decoration: none;
+  font-family: $fontTexto;
+  font-size:1.2em;
+  color:black;
+  align-self: center;
+  display: inline-block;
+  padding: 2%;
+  appearance: none;
+  border: none;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px #da9c00;
+  a{
+    text-decoration: none;
+    color:$fontColor;
+  }
+  cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+    &:before, &:after{
+      position: absolute;
+      content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+    }
+    &:before{
+      display: none;
+      top: -75%;
+      background-image:  
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle,  transparent 20%, #FEB500 20%, transparent 30%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%), 
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, #FEB500 15%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%);
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+      //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+    }     
+    &:after{
+      display: none;
+      bottom: -75%;
+      background-image:  
+        radial-gradient(circle, #FEB500 20%, transparent 20%), 
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle,  transparent 10%, #FEB500 15%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%),
+        radial-gradient(circle, #FEB500 20%, transparent 20%);
+      background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+      //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }   
+    &:active{
+      transform: scale(0.9);
+      background-color: darken(#FEB500, 5%);
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+    &.animate{
+      &:before{
+        display: block;
+        animation: topBubbles ease-in-out 0.75s forwards;
+      }
+      &:after{
+        display: block;
+        animation: bottomBubbles ease-in-out 0.75s forwards;
+      }
+    }
+  }
+@keyframes topBubbles {
+  0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}     
+@keyframes bottomBubbles {
+  0%{
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+ //finEstilosGenerales  ///////// 
+   
+//header  
+.mainHeader {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FACCCC;
+    padding: 0 0.4rem;
+  }
+.mainLogo {
+    width: 3.4em;
+    height: auto;
+  }
+.mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background: rgba(250,204,204,0.7);
+  }
+  .mainNav.show {
+    margin-left: 0;
+  }
+  .navLinks {
+    background: #FACCCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35vw;
+    height: 100%;
+    align-items: center;
+    justify-content:space-evenly;
+    list-style: none;
+  }
+  .linkItem {
+    color:#FEB500;
+    text-decoration: none;
+    font:$fontTexto;
+    font-weight: bold;
+    font-size: 3.3vw;
+    position: relative;
+  }
+  .buttonMenu {  //botonMenuHamburguesa
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+   
+  .buttonMenu span {  //menuHamburguesaRayas
+    width: 37px; 
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #FEB500;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+    
+  .buttonMenu.close span {  //animacionRayasACruz
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);  //giroPrimerSpan
+            color: #FEB500;
+            background:#FEB500;
+  }
+  .buttonMenu.close span:nth-child(2) {  //giroSegundoSpan
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  .buttonMenu.close span:nth-child(3) {  //borroTercerSpan
+    display: none;
+  }
+//terminaMenuNavegacion********************************************************
+//cierraHeader///////////
+
+//estilosSection1////////
+.section1 {
+    background: rgba(254, 181, 0, 0.1) ;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding:10vh 5vw;
+    #bienvenidos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color: #FEB500;
+            font-family: $font;
+            font-weight: 1200;
+            letter-spacing: 3px;
+            padding-bottom: 7.5vh;
+        }
+        p{
+            font-size: 1.3vw;
+            font-family: $fontTexto;
+            font-style: normal;
+            line-height: 30px;
+            text-align: left;
+            padding-bottom: 12vh;
+        }
+    }
+    img {
+        max-width:50vw;;
+        height: auto;
+    }
+}
+//finEstilosSeccion1///////////////////
+
+//estilosSeccion2
+.section2{
+    background: rgba(254, 181, 0, 0.1);
+    .inscripcion{
+        padding:40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+   
+    }
+    .inscribite{
+        display: flex;
+        justify-content: center;
+    }
+}
+//finEstilosSeccion2///////////
+
+//estilosSeccion3
+.section3{
+    background:rgba(254, 181, 0, 0.1); 
+    padding:10vh 5vw;
+    #aprendamos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img{
+            max-width:30vw;;
+            height: auto;
+            padding-left: 8vw;
+        }
+        #aprendiendo{
+            p{
+                font-size: 1.3vw;
+                font-family: $fontTexto;
+                font-style: normal;
+                line-height: 30px;
+                text-align: left;
+                padding-bottom: 12vh;
+            }
+            #button{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+//finEstilosSeccion3//////
+
+//estilosSeccion4
+.section4{
+    background: #feb5001a;
+    padding:10vh 5vw;
+    .clases{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .niveles{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .inscribite{
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+        
+    }
+}
+//finEstilosSeccion4////////
+
+//estilosSeccion5
+.section5{
+    background: #feb5001a;
+    padding:10vh 5vw;
+    #equipo1{
+        display: flex;
+        flex-direction: row-reverse;
+        #profes{
+            p{
+                font-size: 1.3vw;
+                font-family: $fontTexto;
+                font-style: normal;
+                line-height: 30px;
+                text-align: left;
+                padding-bottom: 12vh; 
+            }
+            #button{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        #equipoImagen{
+            padding-right: 8vw;
+             width: 55%;
+             height: auto;
+        }
+    }
+    #especialistas{
+        display: flex;
+        flex-direction: column;
+        #profesEspecialistas{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .cardProfes{                
+                display: flex;
+                flex-direction: column;
+                align-items: center;    
+                h4{
+                    color:#FEB500;
+                    font-family:$font;
+                    font-weight: 800;
+                    padding-top: 3vh;
+                    padding-bottom: 2.5vh;
+                    text-align: center;
+                }               
+                p{
+                    font-size: 15px;
+                    width: 249px;
+                    font-family: $fontTexto;
+                    text-align: center;                
+                }
+            }
+        }
+    }
+}
+///////////
+//estilosSeccion6
+
+.section6{
+  background: #feb5001a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #segunMateria{
+    display:none
+  };
+  h4{
+    color:#FEB500;
+    font-family:$font;
+    font-weight: 800;
+    padding-top: 3vh;
+    padding-bottom: 2.5vh;
+    text-align: center;
+  }
+  #materia{
+    width: auto;
+    font-size: 1.5em;
+  }
+}
+.modalContainer{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.6);
+  .confirmar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .modal-content {
+    background-color: #e7e0ce;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    width: 60%;
+  }
+}
+.modalContainer .confirmar:hover,
+.modalContainer .confirmar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+//FOOTER
+.footer{
+  background: #FACCCC;
+  padding-top: 2%;
+  justify-content: space-around;
+  h4{
+      font-weight: bold;
+  }
+  p{
+      font-size: 14px;
+  }
+}
+.contacto{
+  max-width: 100%;
+  img{
+      float: left;
+  }
+  ol{
+      padding: 0%;
+  }
+  li{
+      list-style: none;
+      justify-content: center;
+  }
+  p{
+      margin-left: 2%;
+  }
+}
+.pago{
+  justify-self: center;
+  padding-left: 5%;
+  .grid_pago{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5%;
+  }
+}
+.sociales{
+  padding-left: 15%;
+  .grid_sociales{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 5%;
+  }
+}
+.copy{
+  text-align: center;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+.suscripcion{
+  padding-top: 5%;
+}
+#segunMateria{display:none};
